@@ -69,30 +69,29 @@ ul {
   background-color: #fff;
 }
 
-.nav-dropdown,
-.nav-item {
-  margin-right: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
+.nav-item,
+.nav-dropdown {
+  margin-right: 30px;
+  padding: 10px;
 }
 
-.nav-item {
-  margin-right: 30px;
+.nav-dropdown {
+  margin-right: 20px;
 }
 
 .nav-item:last-child {
   margin-right: 10px;
 }
 
-.nav-dropdown:hover,
-.nav-item:hover {
+.nav-item:hover,
+.nav-dropdown:hover {
   color: #2aacc8;
   border-top: 5px solid #2aacc8;
   background-color: #fff;
 }
 
-.nav-dropdown,
-.nav-item {
+.nav-item,
+.nav-dropdown {
   border-top: 5px solid transparent;
 }
 
@@ -110,16 +109,26 @@ ul {
   margin: 10px;
   display: block;
   text-transform: capitalize;
+  font-weight: 400;
 }
 
 .dropdown li:not(:last-child) {
   border-bottom: 1px solid #e7e7e7;
 }
 
+.nav-dropdown a {
+  padding-right: 10px;
+}
+
 .cheveron-down {
   content: "\e905";
   color: #000;
-  padding-left: 10px;
+}
+
+.nav-dropdown:hover .cheveron-down {
+  color: #2aacc8;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
 }
 
 .carousel-wrap {
@@ -180,32 +189,34 @@ ul {
 
 .container-wrap {
   min-height: 300px;
-}
-
-.container-cards {
-  width: 1000px;
-  margin: 0 auto;
-  padding-top: 60px;
-  padding-bottom: 50px;
   display: flex;
 }
 
-.card {
+.container-services {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.services {
   width: 220px;
 }
 
-.card:not(:last-child) {
+.services:not(:last-child) {
   margin-right: 40px;
 }
 
-.title-card {
+.services-title {
   font-size: 15px;
   line-height: 20px;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
-.icon-title-card {
+.title-icon {
   content: "\e900""\e904""\e902""\e903";
   font-size: 25px;
   margin-right: 20px;
@@ -215,22 +226,22 @@ ul {
   border-radius: 50%;
 }
 
-.text-card {
+.services-text {
   font-size: 13px;
   line-height: 20px;
   color: #363636;
   margin-bottom: 25px;
 }
 
-.link-card {
+.services-link {
   text-decoration: none;
   font-size: 13px;
   line-height: 20px;
   color: #2aacc8;
 }
 
-.link-card:hover {
-  outline: 1px solid #2aabc8;
+.services-link:hover {
+  color: #e05936;
 }
 
 .cheveron-right {
@@ -241,19 +252,20 @@ ul {
 
 .download-wrap {
   min-height: 230px;
-  padding-top: 45px;
-  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
 }
 
 .download-box {
   width: 1000px;
   min-height: 140px;
   margin: 0 auto;
-  background-color: #e8fcfe;
-  border: 1px solid #81e4ed;
-  padding: 35px 45px 40px 25px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background-color: #e8fcfe;
+  border: 1px solid #81e4ed;
+  padding: 35px 45px 35px 25px;
 }
 
 .download-paragraph {
@@ -266,6 +278,10 @@ ul {
 .download-btn {
   width: 240px;
   height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
   border: 1px solid #2aacc8;
   border-radius: 8px;
   background-image: linear-gradient(
@@ -286,11 +302,10 @@ ul {
   opacity: 70%;
 }
 
-.icon-download {
+.download-icon {
   content: "\e901";
-  font-size: 25px;
+  font-size: 30px;
   color: #fff;
-  padding-right: 15px;
 }
 
 .footer-inner {
