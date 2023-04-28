@@ -48,6 +48,8 @@ ul {
 }
 
 .navigation a {
+  padding: 10px;
+  display: block;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
@@ -69,29 +71,25 @@ ul {
   background-color: #fff;
 }
 
-.nav-item,
-.nav-dropdown {
+.nav-item {
   margin-right: 30px;
-  padding: 10px;
-}
-
-.nav-dropdown {
-  margin-right: 20px;
 }
 
 .nav-item:last-child {
   margin-right: 10px;
 }
 
-.nav-item:hover,
-.nav-dropdown:hover {
+.nav-dropdown {
+  margin-right: 20px;
+}
+
+.nav-item:hover {
   color: #2aacc8;
   border-top: 5px solid #2aacc8;
   background-color: #fff;
 }
 
-.nav-item,
-.nav-dropdown {
+.nav-item {
   border-top: 5px solid transparent;
 }
 
@@ -106,8 +104,6 @@ ul {
 }
 
 .dropdown a {
-  margin: 10px;
-  display: block;
   text-transform: capitalize;
   font-weight: 400;
 }
@@ -117,18 +113,12 @@ ul {
 }
 
 .nav-dropdown a {
-  padding-right: 10px;
+  display: flex;
+  align-items: center;
 }
 
-.cheveron-down {
-  content: "\e905";
-  color: #000;
-}
-
-.nav-dropdown:hover .cheveron-down {
-  color: #2aacc8;
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
+.cheveron-down::before {
+  padding-left: 10px;
 }
 
 .carousel-wrap {
@@ -216,8 +206,7 @@ ul {
   align-items: center;
 }
 
-.title-icon {
-  content: "\e900""\e904""\e902""\e903";
+.title-icon::before {
   font-size: 25px;
   margin-right: 20px;
   padding: 10px;
@@ -238,14 +227,15 @@ ul {
   font-size: 13px;
   line-height: 20px;
   color: #2aacc8;
+  display: flex;
+  align-items: center;
 }
 
 .services-link:hover {
   color: #e05936;
 }
 
-.cheveron-right {
-  content: "\e906";
+.cheveron-right::before {
   color: #000;
   padding-right: 10px;
 }
@@ -302,8 +292,7 @@ ul {
   opacity: 70%;
 }
 
-.download-icon {
-  content: "\e901";
+.download-icon::before {
   font-size: 30px;
   color: #fff;
 }
